@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camadas da Janne</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logo">Camadas da Janne</div>
+
+    <nav class="menu">
+        <a href="#home">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#observacoes">Observações</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Garanta seu bolo agora mesmo!</h1>
+        <p>Venha desfrutar do melhor bolo da cidade</p>
+
+        <div class="hero-buttons">
+            <a href="#galeria" class="btn">Galeria</a>
+            <a href="#cardapio" class="btn btn-outline">Ver Cardápio</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CARDÁPIO ================= -->
+<section id="cardapio" class="cardapio">
+    <h2>Nosso Cardápio</h2>
+
+    <div class="categorias">
+        <button data-categoria="bolos" class="ativo">Bolos</button>
+        <button data-categoria="fatias">Fatias Gourmet</button>
+        <button data-categoria="tortas">Tortas</button>
+        <button data-categoria="gelado">Bolo Gelado</button>
+
+    </div>
+
+    <div class="pratos">
+        <div class="prato-card" data-categoria="bolos">
+            <img src="img/bolo1.jpeg">
+            <h3>Bolo Caseiro</h3>
+            <span>R$ 00,00</span>
+             <button class="btn"onclick="adicionarCarrinho('Bolo Caseiro', 30, 'bolos', this)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="prato-card" data-categoria="bolos">
+            <img src="img/bolo2.jpeg">
+            <h3>Bolo Recheado</h3>
+            <span>R$ 00,00</span>
+            <button class="btn"onclick="adicionarCarrinho('Bolo recheado', 30, 'bolos', this)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="prato-card" data-categoria="bolos">
+            <img src="img/bolo3.jpeg">
+            <h3>Bolo Especial</h3>
+            <span>R$ 00,00</span>
+            <button class="btn"onclick="adicionarCarrinho('Bolo especial', 30, 'bolos', this)">
+                Adicionar
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= OBSERVAÇÕES ================= -->
+<section id="observacoes" class="observacoes">
+    <div class="observacoes-container">
+
+        <div class="observacoes-texto">
+            <h2>Observações</h2>
+            <p>• Encomendas devem ser feitas com no mínimo 2 dias de antecedência.</p>
+            <p>• Pode ocorrer pequena variação no peso final do bolo.</p>
+            <p>• Tortas com 25cm de diametro, rende 10 fatias grandes</p>
+            <p>• Fatias gourmet de 220 a 250gr</p>
+            <p>• Para os amantes de fatias, também vendemos o bolo inteiro, 
+            aproximadamente 2,500kg bolo bem recheado c/ com 1 camada de dois 
+            sabores, exceto o de cenoura.</p>
+            <p>• Delicie-se com nossos bolos gelado que combinam o sabor tradicional
+            com toques especiais, utilizando ingredientes de alta qualidade. 
+            Perfeitos para quem busca praticidade para sua festa. Pedaços de 150Gr.
+            Pedido minimo 10 pedaços.</p>
+        </div>
+
+        <div class="observacoes-img">
+            <img src="img/fotoobs.png">
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section id="galeria" class="galeria">
+    <h2>Galeria de Fotos</h2>
+
+    <div class="galeria-grid">
+        <img src="img/g1.jpg">
+        <img src="img/g2.jpg">
+        <img src="img/g3.jpg">
+        <img src="img/g4.jpg">
+    </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section id="sobre" class="sobre">
+    <div class="sobre-container">
+
+        <div class="sobre-texto">
+            <h2>Sobre Nós</h2>
+            <p>Trabalhamos com bolos artesanais feitos com carinho, ingredientes 
+                selecionados e muito amor, sempre prezando pela qualidade, sabor 
+                e apresentação. Cada bolo é preparado de forma única, pensado para 
+                tornar seus momentos especiais ainda mais doces — seja em aniversários, 
+                comemorações ou simplesmente para adoçar o dia. .</p>
+            <p>Cada encomenda é preparada pensando em momentos especiais, com atenção a
+                cada detalhe para garantir sabor, qualidade e uma apresentação impecável. 
+                Utilizamos ingredientes selecionados e processos artesanais para entregar 
+                bolos frescos, deliciosos e feitos sob medida, proporcionando uma experiência 
+                única desde o primeiro contato até a entrega. Nosso compromisso é transformar 
+                sua comemoração em um momento inesquecível, superando expectativas e garantindo 
+                a satisfação de cada cliente.</p>
+        </div>
+
+        <div class="sobre-img">
+            <img src="img/janne.jpeg">
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contato" class="footer">
+    <p>📍 Rua Exemplo, 123</p>
+    <p>📲 WhatsApp: (55) 99999-9999</p>
+
+    <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+    </div>
+</footer>
+
+<div id="carrinho" class="carrinho">
+    <h3>🛒 Seu pedido</h3>
+
+    <div id="itens-carrinho" class="itens-carrinho"></div>
+
+    <p><strong>Total:</strong> <span id="total">R$ 0,00</span></p>
+
+    <button class="btn" onclick="finalizarPedido()">Finalizar no WhatsApp</button>
+    <button id="btnLimpar" class="btn-outline" onclick="limparCarrinho()">Limpar</button>
+</div>
+<div class="carrinho-float" onclick="toggleCarrinho()">
+    🛒
+    <span id="contador-carrinho">0</span>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
