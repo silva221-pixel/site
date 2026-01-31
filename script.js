@@ -1,7 +1,4 @@
-    /* ================= ANIMAÇÃO AO SCROLL ================= */
-    const elementos = document.querySelectorAll(
-        '.hero-content, section h2, .prato-card, .form-reserva'
-    );
+/* ================= ANIMAÇÃO AO SCROLL ================= */
 
     function animarScroll() {
         const alturaJanela = window.innerHeight * 0.85;
