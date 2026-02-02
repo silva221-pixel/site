@@ -110,7 +110,7 @@ lista.innerHTML += `
 
         // 👇 CONTROLE DE VISIBILIDADE (estilo iFood)
         if (carrinho.length > 0) {
-            carrinhoBox.style.display = 'block';
+            
             btnLimpar.style.display = 'block';
         } else {
             carrinhoBox.style.display = 'none';

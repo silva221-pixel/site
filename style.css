@@ -136,6 +136,7 @@ body {
 /* ================= SEÇÕES ================= */
 section {
     padding: 80px 8%;
+    scroll-margin-top: 90px;
 }
 
 section h2 {
