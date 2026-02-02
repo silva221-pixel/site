@@ -131,30 +131,40 @@ lista.innerHTML += `
             atualizarCarrinho();
         }
     }
-
-    function finalizarPedido() {
+function finalizarPedido() {
     if (!carrinho.length) return;
 
-    let msg = 'Olá! Gostaria de fazer o pedido:%0A%0A';
+    let msg = 'Olá! Gostaria de fazer o pedido:\n\n';
     let total = 0;
 
     carrinho.forEach(item => {
-        msg += `• ${item.qtd}x ${item.nome} - R$ ${(item.preco * item.qtd).toFixed(2)}%0A`;
+        msg += `• ${item.qtd}x ${item.nome} - R$ ${(item.preco * item.qtd).toFixed(2)}\n`;
         total += item.preco * item.qtd;
     });
 
-    msg += `%0A*Total: R$ ${total.toFixed(2)}*`;
+    msg += `\nTotal: R$ ${total.toFixed(2)}`;
 
-    const telefone = '5511999999999';
+    const telefone = '5561991199563';
+    const mensagem = encodeURIComponent(msg);
 
-    // 👉 Abre o WhatsApp
-    window.open(`https://wa.me/${telefone}?text=${msg}`, '_blank');
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    // 🧹 LIMPA O CARRINHO APÓS ENVIAR
-    carrinho = [];
-    localStorage.removeItem('carrinho');
-    atualizarCarrinho();
+    if (isMobile) {
+        // 📱 Abre o APP do WhatsApp
+        location.href = `whatsapp://send?phone=${telefone}&text=${mensagem}`;
+    } else {
+        // 💻 Abre WhatsApp Web
+        location.href = `https://web.whatsapp.com/send?phone=${telefone}&text=${mensagem}`;
+    }
 }
+
+
+    setTimeout(() => {
+        carrinho = [];
+        localStorage.removeItem('carrinho');
+        atualizarCarrinho();
+    }, 500);
+
 
 function atualizarContador() {
     const contador = document.getElementById('contador-carrinho');
