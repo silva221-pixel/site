@@ -157,8 +157,6 @@ function finalizarPedido() {
         location.href = `https://web.whatsapp.com/send?phone=${telefone}&text=${mensagem}`;
     }
 }
-
-
     setTimeout(() => {
         carrinho = [];
         localStorage.removeItem('carrinho');
