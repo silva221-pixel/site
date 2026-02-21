@@ -108,7 +108,7 @@ body {
     background-color: var(--rose-destaque);
     color: var(--branco);
     padding: 14px 28px;
-    border-radius: 30px;
+    border-radius: 8px;
     text-decoration: none;
     border: none;
     cursor: pointer;
@@ -119,6 +119,7 @@ body {
 
 .btn:hover {
     background-color: var(--botao-hover);
+    transform: translateY(-2px);
 }
 
 .btn-outline {
